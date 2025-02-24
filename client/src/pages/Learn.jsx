@@ -37,17 +37,21 @@ const Learn = () => {
 
   return (
     <div style={styles.appContainer}>
-      <nav className="navbar">
-        <div className="container">
-          <ul>
+       <nav className="asl-navbar">
+        <div className="asl-container">
+          <Link to="/" className="asl-logo">
+           GestureGenius
+          </Link>
+          <ul className="asl-nav-links">
             <li><Link to="/">Home</Link></li>
             <li><Link to="/self-testing">Self Testing</Link></li>
             <li><Link to="/video-calling">Video Calling</Link></li>
             <li><Link to="/learn">Learn ASL</Link></li>
-                        <li><Link to="/Explore">Explore Model</Link></li>
+            <li><Link to="/explore">Explore Model</Link></li>
           </ul>
         </div>
       </nav>
+      
       <main style={styles.main}>
         <h1 style={styles.title}>Learn ASL Alphabet</h1>
 
@@ -104,7 +108,7 @@ const Learn = () => {
 
 const styles = {
   appContainer: {
-    minHeight: '100vh',
+    minHeight: '50vh',
     display: 'flex',
     flexDirection: 'column',
   },
