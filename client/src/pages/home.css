@@ -9,7 +9,45 @@
     --background-white: #ffffff;
     --gradient-primary: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
   }
+  .team{
+    height: 450px;
+    margin-left: 50px;
+    width: 450px;
+    border-radius: 25px;
+  }
+  .heroimg {
+    height: 500px;
+    width: 100%; /* Ensures it adapts to the container */
+    border-radius: 20px; /* Smooth rounded corners */
+    object-fit: cover; /* Ensures the image maintains aspect ratio */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+    
+    /* Animation */
+    animation: fadeInScale 1.5s ease-in-out;
+}
+
+/* Keyframes for fade-in and scale animation */
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Optional: Add hover effect for a slight zoom */
+.heroimg:hover {
+    transform: scale(1.03);
+    transition: transform 0.3s ease-in-out;
+}
+.footerfont{
+  color: #f9fafb;
+}
   .navbar {
+
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);

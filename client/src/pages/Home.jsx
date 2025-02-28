@@ -2,14 +2,15 @@ import React from 'react';
 import { Link } from "react-router-dom"
 import { Camera, Video, BrainCircuit, Users, BookOpen, Heart, Github, Twitter, Linkedin } from 'lucide-react'
 import "./home.css"
-
+import team from "./team.jpg"
+import hero from "./hero.jpg"
 const HomePage = () => {
   return (
     <div className="homepage">
      <nav className="asl-navbar">
   <div className="asl-container">
     <Link to="/" className="asl-logo">
-      ASL Communicator
+     GestureGenius
     </Link>
     <ul className="asl-nav-links">
       <li><Link to="/">Home</Link></li>
@@ -37,37 +38,17 @@ const HomePage = () => {
             </div>
           </div>
           <div className="hero-image">
-            <img src="/placeholder.svg?height=400&width=400" alt="ASL Detection Illustration" />
+            <img src={hero} alt="ASL Detection Illustration" className='heroimg' />
           </div>
         </div>
         <div className="wave-shape"></div>
       </section>
 
-      {/* Stats Section */}
-      <section className="stats">
-        <div className="container">
-          <div className="stats-grid">
-            <div className="stat-card">
-              <h3>500K+</h3>
-              <p>Active Users</p>
-            </div>
-            <div className="stat-card">
-              <h3>95%</h3>
-              <p>Detection Accuracy</p>
-            </div>
-            <div className="stat-card">
-              <h3>24/7</h3>
-              <p>Support Available</p>
-            </div>
-          </div>
-        </div>
-      </section>
+     
 
-      {/* Problem Highlight */}
       <section className="problem-section">
         <div className="container">
           <div className="section-header-new">
-            <div className="header-badge">The Challenge</div>
             <h2>Breaking Down Communication Barriers 🌉</h2>
             <div className="header-line"></div>
           </div>
@@ -105,7 +86,6 @@ const HomePage = () => {
       <section className="solution-section">
         <div className="container">
           <div className="section-header-new">
-            <div className="header-badge">Our Solution</div>
             <h2>How ASL Communicator Helps 🚀</h2>
             <div className="header-line"></div>
           </div>
@@ -138,7 +118,6 @@ const HomePage = () => {
       <section className="about-section">
         <div className="container">
           <div className="section-header-new">
-            <div className="header-badge">About Us</div>
             <h2>Our Mission & Vision 🎯</h2>
             <div className="header-line"></div>
           </div>
@@ -165,7 +144,7 @@ const HomePage = () => {
               </div>
             </div>
             <div className="about-image">
-              <img src="/placeholder.svg?height=400&width=400" alt="Our Team" />
+              <img src={team} alt="Our Team" className='team' />
             </div>
           </div>
         </div>
@@ -175,7 +154,6 @@ const HomePage = () => {
       <section className="testimonials">
         <div className="container">
           <div className="section-header">
-            <span className="section-tag">Testimonials</span>
             <h2>What Our Users Say 💬</h2>
           </div>
           <div className="testimonials-grid">
@@ -185,7 +163,6 @@ const HomePage = () => {
                   "ASL Detector has transformed how I communicate at work. It's incredibly accurate and easy to use."
                 </p>
                 <div className="testimonial-author">
-                  <img src="/placeholder.svg?height=50&width=50" alt="Sarah M." />
                   <div>
                     <h4>Sarah M.</h4>
                     <p>ASL User</p>
@@ -197,7 +174,6 @@ const HomePage = () => {
               <div className="testimonial-content">
                 <p>"As an educator, this tool has made my classroom more inclusive and accessible for all students."</p>
                 <div className="testimonial-author">
-                  <img src="/placeholder.svg?height=50&width=50" alt="John D." />
                   <div>
                     <h4>John D.</h4>
                     <p>Teacher</p>
@@ -213,7 +189,7 @@ const HomePage = () => {
       <section className="cta">
         <div className="container">
           <h2>Ready to Break Communication Barriers? 🚀</h2>
-          <p>Join thousands of users who are already making a difference</p>
+          <p className='footerfont'>Join thousands of users who are already making a difference</p>
           <div className="cta-buttons">
             <Link to="/self-testing" className="primary-button">
               Try It Now
@@ -231,7 +207,7 @@ const HomePage = () => {
         <div className="container">
           <div className="footer-content">
             <div className="footer-section">
-              <h3>🤟 ASL Detector</h3>
+              <h3>🤟 GestureGenius</h3>
               <p>Breaking communication barriers with technology</p>
               <div className="social-links">
                 <a href="#" aria-label="Github">
@@ -282,18 +258,14 @@ const HomePage = () => {
             <div className="footer-section">
               <h4>Contact Us</h4>
               <ul>
-                <li>📧 hello@asldetector.com</li>
-                <li>📞 (555) 123-4567</li>
-                <li>📍 San Francisco, CA</li>
+                <li>📞 +91 7046996816</li>
+                <li>📍 402 Aster Nadiad</li>
               </ul>
             </div>
           </div>
           <div className="footer-bottom">
             <p>&copy; {new Date().getFullYear()} ASL Detector. All rights reserved.</p>
-            <div className="footer-links">
-              <Link to="/privacy">Privacy Policy</Link>
-              <Link to="/terms">Terms of Service</Link>
-            </div>
+            
           </div>
         </div>
       </footer>

@@ -37,12 +37,7 @@ code {
   margin: 0 auto;
 }
 
-.navbar .logo {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #4f46e5;
-  text-decoration: none;
-}
+
 
 .nav-links {
   display: flex;
@@ -154,10 +149,7 @@ code {
   margin-bottom: 20px;
 }
 
-.cta p {
-  color: #666;
-  margin-bottom: 30px;
-}
+
 
 .cta button {
   background-color: #2563eb;
