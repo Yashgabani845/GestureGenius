@@ -83,15 +83,12 @@ def generate_frames():
                     detected_class = class_names[index]
                     detected_confidence = float(prediction[0][index])
 
-                    # Draw bounding box and label
                     cv2.rectangle(frame, (x_min, y_min), (x_max, y_max), (0, 255, 0), 2)
                     cv2.putText(frame, f"{detected_class} ({detected_confidence*100:.2f}%)",
                                 (x_min, y_min - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0, 255, 0), 2)
 
-        # Update latest prediction
         latest_prediction = {"class": detected_class, "confidence": detected_confidence}
 
-        # Encode frame for streaming
         _, buffer = cv2.imencode('.jpg', frame)
         frame_bytes = buffer.tobytes()
 
